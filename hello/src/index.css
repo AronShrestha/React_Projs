@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #333f4b;
+  font-family: Inter,sans-serif;
+  background-image: url('./images/logo192.png');
+  background-repeat: no-repeat;
+  background-position-x:right;
+  background-position-y:75%;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 30px 25px;
+    background-color: #212221;
+}
+.Left{
+    margin-right: auto;
+    font-weight: 800;
+    color: #61dafb;;
+
+}
+.Right{
+    color: #deebf8;
+    font-weight: 600;
+}
+.react-img{
+    height :30px;
+    height: 40px;
+    margin-right: 7px;
+}
+main{
+    padding: 30px 45px;
+}
+.Main-title{
+    color:white;
+}
+.points{
+    color: white;
+    
+
+}
+.points > li{
+
+ 
+     font-weight: 40px;
+     padding-block: 10px;
+}
+.points >li::marker{
+    font-size: 1.4rem;
+    color: rgb(60, 60, 150);
+}
