@@ -19,13 +19,20 @@ export default function App(){
   //   }
   // }
   const [box,setBox] = useState(boxes)
+  function toggle(){
+    console.log("I am clicked")
+  }
   // console.log(box)
   // const cond = odd(box)
   // const styles ={
   //   backgroundColor : cond  ? "#222222" : "#cccccc"
   // }
   const boxelement =box.map(
-    bx=><BOX id={bx.id} on={bx.on} />)
+    bx=><BOX 
+    id={bx.id} 
+    on={bx.on} 
+    toggle ={toggle}
+    />)
   return(
     <main>
       <h1>Boxes will go here</h1>
