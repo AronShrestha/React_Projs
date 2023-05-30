@@ -1,11 +1,16 @@
-import React from "react"
+import React,{useState}  from "react"
 
 export default function BOX(props){
+  const [color_flag,setColorFlag] = useState(props.on)
 
   const styles ={
-    backgroundColor :props.on  ? "#222222" : "#cccccc"
+    backgroundColor :color_flag  ? "#222222" : "#cccccc"
   }
-  console.log(props)
+  function change(e){
+    console.log(e)
+    setColorFlag(color_flag=>!color_flag)
+  }
+ 
     return(
         <div   style={styles} 
         key={props.id} 
