@@ -14,7 +14,9 @@ export default function BOX(props){
     return(
         <div   style={styles} 
         key={props.id} 
-        onClick = {props.toggle}
+        onClick = {()=>{
+          return props.toggle(props.id)
+        }}
         className="box-container">{props.id} {props.on}</div>
     )
    

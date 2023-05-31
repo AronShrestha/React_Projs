@@ -19,8 +19,30 @@ export default function App(){
   //   }
   // }
   const [box,setBox] = useState(boxes)
-  function toggle(){
-    console.log("I am clicked")
+  function toggle(id){
+    console.log("I am clicked from :",id)
+    setBox(
+      prevBox=>{
+        const newBox = []
+        for(let i =0 ;i< prevBox.length;i++){
+          const currentBox = prevBox[i]
+          if (currentBox.id === id)
+          {
+            // console.log("curretBox :",...currentBox)
+            const updatedBox ={
+              ...currentBox,
+              on:!currentBox.on
+            }
+            newBox.push(updatedBox)
+          }
+          else{
+            newBox.push(currentBox)
+          }
+        }
+        return newBox
+      }
+      
+    )
   }
   // console.log(box)
   // const cond = odd(box)
@@ -29,8 +51,10 @@ export default function App(){
   // }
   const boxelement =box.map(
     bx=><BOX 
+    key ={bx.id}
     id={bx.id} 
     on={bx.on} 
+
     toggle ={toggle}
     />)
   return(
