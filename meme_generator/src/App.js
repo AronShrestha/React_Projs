@@ -39,6 +39,7 @@ export default function App(){
             newBox.push(currentBox)
           }
         }
+        console.log(newBox)
         return newBox
       }
       
@@ -50,13 +51,13 @@ export default function App(){
   //   backgroundColor : cond  ? "#222222" : "#cccccc"
   // }
   const boxelement =box.map(
-    bx=><BOX 
+    bx=>(<BOX 
     key ={bx.id}
     id={bx.id} 
     on={bx.on} 
 
     toggle ={toggle}
-    />)
+    />))
   return(
     <main>
       <h1>Boxes will go here</h1>
